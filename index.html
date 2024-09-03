@@ -97,15 +97,15 @@
 <p>[TOC]</p>
 <h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1 环境准备"></a>1 环境准备</h2><h3 id="1-1-安装nodejs"><a href="#1-1-安装nodejs" class="headerlink" title="1.1 安装nodejs"></a>1.1 安装nodejs</h3><p>​		直接根据<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/package-manager">官网</a>内容安装即可</p>
 <p>​	<strong>验证：</strong>命令行运行<code>node -v</code>后正常输出版本号</p>
-<p>![image-20240903214624565](&#x2F;Users&#x2F;shanhao&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240903214624565.png)</p>
+<p><img src="/images/1.png" alt="image-20240903214624565"></p>
 <h4 id="1-2-安装hexo及依赖"><a href="#1-2-安装hexo及依赖" class="headerlink" title="1.2 安装hexo及依赖"></a>1.2 安装hexo及依赖</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br><span class="line">npm install `--`save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 
 <p>​	<strong>验证：</strong>命令行运行<code>hexo -v</code>后正常输出版本号</p>
-<p>![image-20240903215705148](&#x2F;Users&#x2F;shanhao&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240903215705148.png)</p>
+<p><img src="/images/2.png" alt="image-20240903215705148"></p>
 <h2 id="2-搭建个人博客"><a href="#2-搭建个人博客" class="headerlink" title="2 搭建个人博客"></a>2 搭建个人博客</h2><h3 id="2-1-新建博客"><a href="#2-1-新建博客" class="headerlink" title="2.1 新建博客"></a>2.1 新建博客</h3><h4 id="2-1-1-新建一个博客保存路径"><a href="#2-1-1-新建一个博客保存路径" class="headerlink" title="2.1.1 新建一个博客保存路径"></a>2.1.1 新建一个博客保存路径</h4><h4 id="2-1-2-初始化博客"><a href="#2-1-2-初始化博客" class="headerlink" title="2.1.2 初始化博客"></a>2.1.2 初始化博客</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
 <p>​	验证：博客保存路径下生成如下文件</p>
-<p>![image-20240903215324976](&#x2F;Users&#x2F;shanhao&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240903215324976.png)</p>
+<p><img src="/images/3.png" alt="image-20240903215324976"></p>
 <h3 id="2-2-生成静态网页"><a href="#2-2-生成静态网页" class="headerlink" title="2.2 生成静态网页"></a>2.2 生成静态网页</h3><h4 id="2-2-1-生成静态网页"><a href="#2-2-1-生成静态网页" class="headerlink" title="2.2.1 生成静态网页"></a>2.2.1 生成静态网页</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
 <h4 id="2-2-2-预览"><a href="#2-2-2-预览" class="headerlink" title="2.2.2 预览"></a>2.2.2 预览</h4><p>运行：</p>
@@ -114,83 +114,33 @@
 <p>访问<a target="_blank" rel="noopener" href="http://localhost:4000/%E5%8D%B3%E5%8F%AF%E8%8E%B7%E5%BE%97%E9%A2%84%E8%A7%88%E6%95%88%E6%9E%9C">http://localhost:4000/即可获得预览效果</a></p>
 <p><img src="https://oscimg.oschina.net/oscnet/defb69f9-e4a3-4a70-881c-897425ec5726.png" alt="img"></p>
 <h3 id="2-3-博客部署到github"><a href="#2-3-博客部署到github" class="headerlink" title="2.3 博客部署到github"></a>2.3 博客部署到github</h3><h4 id="2-3-1-新建仓库"><a href="#2-3-1-新建仓库" class="headerlink" title="2.3.1 新建仓库"></a>2.3.1 新建仓库</h4><p>​		按照如下配置新建一个仓库</p>
-<p>![image-20240903220034939](&#x2F;Users&#x2F;shanhao&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240903220034939.png)</p>
-<p>​		其中在修改“1”中，<code>xxxx</code>应被替换为你自己的仓库名，这也将成为你博客域名的一部分</p>
+<p><img src="/images/4.png" alt="image-20240903220034939"></p>
+<p>​		其中在修改“1”中，<code>xxxx</code>应被替换为你自己的仓库名，这也将成为你博客域名的一部分，<strong>这里要求与用户名相同，否则博客网页无法访问</strong></p>
 <h4 id="2-3-2-修改配置文件"><a href="#2-3-2-修改配置文件" class="headerlink" title="2.3.2 修改配置文件"></a>2.3.2 修改配置文件</h4><p>​		在博客保存路径下(即当初运行<code>hexo init</code>的路径下)，有一个<code>_config.yml</code>文件</p>
 <p>​		在该文件的最后，有：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: ‘’</span><br></pre></td></tr></table></figure>
 
 <p>​		将其修改为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:username/xxxx.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
-<p>​		其中<code>username</code>是你github账号的用户名，<code>xxxx</code>即上面创建仓库时，仓库名中的xxxx</p>
+<p>​		其中<code>username</code>是你github账号的用户名，<strong>前后两个username相同</strong></p>
 <p>​		branch的设置也应当注意，branch的设置，应与在新建仓库后，下面红框中的内容一致（通常为main）</p>
-<p>![image-20240903220634575](&#x2F;Users&#x2F;shanhao&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240903220634575.png)</p>
+<p><img src="/images/5.png" alt="image-20240903220634575"></p>
 <h4 id="2-3-3-发不到github"><a href="#2-3-3-发不到github" class="headerlink" title="2.3.3 发不到github"></a>2.3.3 发不到github</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
-<p>自此，通过访问<a target="_blank" rel="noopener" href="http://xxxx.github.io/%E5%8D%B3%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%88%91%E4%BB%AC%E6%96%B0%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86">http://xxxx.github.io/即可访问我们新建的博客了</a></p>
+<p>自此，通过访问<a target="_blank" rel="noopener" href="http://username.github.io/%E5%8D%B3%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%88%91%E4%BB%AC%E6%96%B0%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86">http://username.github.io/即可访问我们新建的博客了</a></p>
 <h3 id="2-4-修改博客内容"><a href="#2-4-修改博客内容" class="headerlink" title="2.4 修改博客内容"></a>2.4 修改博客内容</h3><h4 id="2-4-1-新建一篇博客"><a href="#2-4-1-新建一篇博客" class="headerlink" title="2.4.1 新建一篇博客"></a>2.4.1 新建一篇博客</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &#x27;name_of_blog&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>此时，在<code>path/to/blog/source</code>路径下已经产生了一个名为<code>name_of_blog</code>的md文件（<code>name_of_blog</code>可替换）</p>
 <h4 id="2-4-2-编写博客"><a href="#2-4-2-编写博客" class="headerlink" title="2.4.2 编写博客"></a>2.4.2 编写博客</h4><p>通过编写博客对应的md文档，即可实现对博客的编写</p>
 <h4 id="2-4-3-重新将博客部署到github"><a href="#2-4-3-重新将博客部署到github" class="headerlink" title="2.4.3 重新将博客部署到github"></a>2.4.3 重新将博客部署到github</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
+<p>重新访问<a target="_blank" rel="noopener" href="http://username.github.io/%E5%8D%B3%E5%8F%AF%E8%8E%B7%E5%BE%97%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84%E5%86%85%E5%AE%B9">http://username.github.io/即可获得修改后的内容</a></p>
 
       
     </div>
     <footer class="article-footer">
       <a data-url="http://example.com/2024/09/03/firstblog/" data-id="cm0mif9k00000owyv21kn4184" data-title="first blog:借助hexo框架创建自己的博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/09/03/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-09-03T13:11:41.398Z" itemprop="datePublished">2024-09-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/09/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/03/hello-world/" data-id="cm0mghl7l0000v2yv0p5mhgt9" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -234,10 +184,6 @@
         
           <li>
             <a href="/2024/09/03/firstblog/">first blog:借助hexo框架创建自己的博客</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/03/hello-world/">Hello World</a>
           </li>
         
       </ul>
