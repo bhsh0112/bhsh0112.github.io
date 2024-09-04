@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://example.com/images/6.png">
 <meta property="og:image" content="http://example.com/images/7.png">
 <meta property="article:published_time" content="2024-09-03T13:35:29.000Z">
-<meta property="article:modified_time" content="2024-09-04T00:07:52.290Z">
+<meta property="article:modified_time" content="2024-09-04T00:10:33.403Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/1.png">
@@ -108,24 +108,24 @@
 <p>[TOC]</p>
 <h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1 环境准备"></a>1 环境准备</h2><h3 id="1-1-安装nodejs"><a href="#1-1-安装nodejs" class="headerlink" title="1.1 安装nodejs"></a>1.1 安装nodejs</h3><p>​		直接根据<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/package-manager">官网</a>内容安装即可</p>
 <p>​	<strong>验证：</strong>命令行运行<code>node -v</code>后正常输出版本号</p>
-<p><img src="/images/1.png" alt="image-20240903214624565"></p>
+<p><img src="/images/1.png" alt="图1"></p>
 <h4 id="1-2-安装hexo及依赖"><a href="#1-2-安装hexo及依赖" class="headerlink" title="1.2 安装hexo及依赖"></a>1.2 安装hexo及依赖</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br><span class="line">npm install `--`save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 
 <p>​	<strong>验证：</strong>命令行运行<code>hexo -v</code>后正常输出版本号</p>
-<p><img src="/images/2.png" alt="image-20240903215705148"></p>
+<p><img src="/images/2.png" alt="图2"></p>
 <h2 id="2-搭建个人博客"><a href="#2-搭建个人博客" class="headerlink" title="2 搭建个人博客"></a>2 搭建个人博客</h2><h3 id="2-1-新建博客"><a href="#2-1-新建博客" class="headerlink" title="2.1 新建博客"></a>2.1 新建博客</h3><h4 id="2-1-1-新建一个博客保存路径"><a href="#2-1-1-新建一个博客保存路径" class="headerlink" title="2.1.1 新建一个博客保存路径"></a>2.1.1 新建一个博客保存路径</h4><h4 id="2-1-2-初始化博客"><a href="#2-1-2-初始化博客" class="headerlink" title="2.1.2 初始化博客"></a>2.1.2 初始化博客</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
 <p>​	验证：博客保存路径下生成如下文件</p>
-<p><img src="/images/3.png" alt="image-20240903215324976"></p>
+<p><img src="/images/3.png" alt="图3"></p>
 <h3 id="2-2-生成静态网页"><a href="#2-2-生成静态网页" class="headerlink" title="2.2 生成静态网页"></a>2.2 生成静态网页</h3><h4 id="2-2-1-生成静态网页"><a href="#2-2-1-生成静态网页" class="headerlink" title="2.2.1 生成静态网页"></a>2.2.1 生成静态网页</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
 <h4 id="2-2-2-预览"><a href="#2-2-2-预览" class="headerlink" title="2.2.2 预览"></a>2.2.2 预览</h4><p>运行：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>访问<a target="_blank" rel="noopener" href="http://localhost:4000/%E5%8D%B3%E5%8F%AF%E8%8E%B7%E5%BE%97%E9%A2%84%E8%A7%88%E6%95%88%E6%9E%9C">http://localhost:4000/即可获得预览效果</a></p>
-<p><img src="https://oscimg.oschina.net/oscnet/defb69f9-e4a3-4a70-881c-897425ec5726.png" alt="img"></p>
+<p><img src="https://oscimg.oschina.net/oscnet/defb69f9-e4a3-4a70-881c-897425ec5726.png" alt="图4"></p>
 <h3 id="2-3-博客部署到github"><a href="#2-3-博客部署到github" class="headerlink" title="2.3 博客部署到github"></a>2.3 博客部署到github</h3><h4 id="2-3-1-新建仓库"><a href="#2-3-1-新建仓库" class="headerlink" title="2.3.1 新建仓库"></a>2.3.1 新建仓库</h4><p>​		按照如下配置新建一个仓库</p>
-<p><img src="/images/4.png" alt="image-20240903220034939"></p>
+<p><img src="/images/4.png" alt="图5"></p>
 <p>​		其中在修改“1”中，<code>xxxx</code>应被替换为你自己的仓库名，这也将成为你博客域名的一部分，<strong>这里要求与用户名相同，否则博客网页无法访问</strong></p>
 <h4 id="2-3-2-修改配置文件"><a href="#2-3-2-修改配置文件" class="headerlink" title="2.3.2 修改配置文件"></a>2.3.2 修改配置文件</h4><p>​		在博客保存路径下(即当初运行<code>hexo init</code>的路径下)，有一个<code>_config.yml</code>文件</p>
 <p>​		在该文件的最后，有：</p>
@@ -136,7 +136,7 @@
 
 <p>​		其中<code>username</code>是你github账号的用户名，<strong>前后两个username相同</strong></p>
 <p>​		branch的设置也应当注意，branch的设置，应与在新建仓库后，下面红框中的内容一致（通常为main）</p>
-<p><img src="/images/5.png" alt="image-20240903220634575"></p>
+<p><img src="/images/5.png" alt="图6"></p>
 <h4 id="2-3-3-发不到github"><a href="#2-3-3-发不到github" class="headerlink" title="2.3.3 发不到github"></a>2.3.3 发不到github</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>自此，通过访问<a target="_blank" rel="noopener" href="http://username.github.io/%E5%8D%B3%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%88%91%E4%BB%AC%E6%96%B0%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86">http://username.github.io/即可访问我们新建的博客了</a></p>
@@ -147,11 +147,11 @@
 <li><p>编写文本内容：通过编写博客对应的md文档，即可实现对博客的编写</p>
 </li>
 <li><p>修改题目：修改博客保存路径下的<code>_config.yml</code>中<code>title</code>的内容</p>
-<p><img src="/images/6.png" alt="image-20240904080513858"></p>
+<p><img src="/images/6.png" alt="图7"></p>
 </li>
 </ul>
 <p>​			即可对应修改博客中的如下标题：</p>
-<p><img src="/images/7.png" alt="image-20240904080612048"></p>
+<p><img src="/images/7.png" alt="图8"></p>
 <h4 id="2-4-3-重新将博客部署到github"><a href="#2-4-3-重新将博客部署到github" class="headerlink" title="2.4.3 重新将博客部署到github"></a>2.4.3 重新将博客部署到github</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>重新访问<a target="_blank" rel="noopener" href="http://username.github.io/%E5%8D%B3%E5%8F%AF%E8%8E%B7%E5%BE%97%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84%E5%86%85%E5%AE%B9">http://username.github.io/即可获得修改后的内容</a></p>
