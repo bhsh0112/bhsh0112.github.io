@@ -1,27 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="参考教程：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;chenlove&#x2F;p&#x2F;15058170.html 在一切开始之前，需要安装好git并配置好SSH Key，如尚未配置，请自行查阅或参考参考教程的内容 PS:本文展示样例均为mac操作系统自带命令行工具中的效果，如操作系统不同，命令及效果会略有不同（linux系统大体相同，windows系统或有一些差异） [TOC] 1 环境准备1.1 安装">
-<meta property="og:type" content="article">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="sh&#39;s blog">
+    <title>借助hexo框架创建自己的博客 - sh&#39;s blog</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"参考教程：https://www.cnblogs.com/chenlove/p/15058170.html\n在一切开始之前，需要安装好git并配置好SSH Key，如尚未配置，请自行查阅或参考参考教程的内容\nPS:本文展示样例均为mac操作系统自带命令行工具中的效果，如操作系统不同，命令及效果会略有不同（linux系统大体相同，windows系统或有一些差异）\n[TOC]\n1 环境准备1.1 安装nodejs​\t\t直接根据官网内容安装即可\n​\t验证：命令行运行node -v后正常输出版本号\n\n1.2 安装hexo及依赖12npm install hexo -gnpm install `--`save hexo-deployer-git\n\n​\t验证：命令行运行hexo -v后正常输出版本号\n\n2 搭建个人博客2.1 新建博客2.1.1 新建一个博客保存路径2.1.2 初始化博客1hexo init\n\n​\t验证：博客保存路径下生成如下文件\n\n2.2 生成静态网页2.2.1 生成静态网页1hexo g\n\n2.2.2 预览运行：\n1hexo s\n\n访问http://localhost:4000/即可获得预览效果\n\n2.3 博客部署到github2.3.1 新建仓库​\t\t按照如下配置新建一个仓库\n\n​\t\t其中在修改“1”中，xxxx应被替换为你自己的仓库名，这也将成为你博客域名的一部分，这里要求与用户名相同，否则博客网页无法访问\n2.3.2 修改配置文件​\t\t在博客保存路径下(即当初运行hexo init的路径下)，有一个_config.yml文件\n​\t\t在该文件的最后，有：\n12deploy:  type: ‘’\n\n​\t\t将其修改为：\n1234deploy:  type: git  repository: git@github.com:username/username.github.io.git  branch: main\n\n​\t\t其中username是你github账号的用户名，前后两个username相同\n​\t\tbranch的设置也应当注意，branch的设置，应与在新建仓库后，下面红框中的内容一致（通常为main）\n\n2.3.3 发不到github1hexo d\n\n自此，通过访问http://username.github.io/即可访问我们新建的博客了\n2.4 修改博客内容2.4.1 新建一篇博客1hexo new &#x27;name_of_blog&#x27;\n\n此时，在path/to/blog/source路径下已经产生了一个名为name_of_blog的md文件（name_of_blog可替换）\n2.4.2 编写博客\n编写文本内容：通过编写博客对应的md文档，即可实现对博客的编写\n\n修改题目：修改博客保存路径下的_config.yml中title的内容\n\n\n\n​\t\t\t即可对应修改博客中的如下标题：\n\n2.4.3 重新将博客部署到github12hexo ghexo d\n\n重新访问http://username.github.io/即可获得修改后的内容\n","dateCreated":"2024-09-03T21:35:29+08:00","dateModified":"2024-09-04T09:06:45+08:00","datePublished":"2024-09-03T21:35:29+08:00","description":"","headline":"借助hexo框架创建自己的博客","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/09/03/firstblog/"},"publisher":{"@type":"Organization","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"http://example.com/2024/09/03/firstblog/"}</script>
+    <meta name="description" content="参考教程：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;chenlove&#x2F;p&#x2F;15058170.html 在一切开始之前，需要安装好git并配置好SSH Key，如尚未配置，请自行查阅或参考参考教程的内容 PS:本文展示样例均为mac操作系统自带命令行工具中的效果，如操作系统不同，命令及效果会略有不同（linux系统大体相同，windows系统或有一些差异） [TOC] 1 环境准备1.1 安装">
+<meta property="og:type" content="blog">
 <meta property="og:title" content="借助hexo框架创建自己的博客">
 <meta property="og:url" content="http://example.com/2024/09/03/firstblog/index.html">
 <meta property="og:site_name" content="sh&#39;s blog">
@@ -40,170 +32,330 @@
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/1.png">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
 
-<link rel="canonical" href="http://example.com/2024/09/03/firstblog/">
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
 
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
 
-  <title>借助hexo框架创建自己的博客 | sh's blog</title>
-  
+    <!--STYLES END-->
+    
 
+    
 
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    
+        
+    
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/"
+            aria-label=""
+        >
+            sh&#39;s blog
+        </a>
     </div>
-  </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Open the link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
 
-  <div class="site-meta">
+            <!-- Define author's picture -->
 
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">sh's blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Categories"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archives"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Search"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google +"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google +</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
     </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
-
-  </li>
-  </ul>
 </nav>
 
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
             
-
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
     
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/03/firstblog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="sh's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          借助hexo框架创建自己的博客
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            借助hexo框架创建自己的博客
         </h1>
-
+    
+    
         <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-09-03 21:35:29" itemprop="dateCreated datePublished" datetime="2024-09-03T21:35:29+08:00">2024-09-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-09-04 09:06:45" itemprop="dateModified" datetime="2024-09-04T09:06:45+08:00">2024-09-04</time>
-              </span>
-
-          
-
-        </div>
-      </header>
+    <time datetime="2024-09-03T21:35:29+08:00">
+	
+		    Sep 03, 2024
+    	
+    </time>
+    
+</div>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</div>
 
-      
-        <p>参考教程：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenlove/p/15058170.html">https://www.cnblogs.com/chenlove/p/15058170.html</a></p>
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>参考教程：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenlove/p/15058170.html">https://www.cnblogs.com/chenlove/p/15058170.html</a></p>
 <p><strong>在一切开始之前，需要安装好git并配置好SSH Key，如尚未配置，请自行查阅或参考参考教程的内容</strong></p>
 <p>PS:本文展示样例均为mac操作系统自带命令行工具中的效果，如操作系统不同，命令及效果会略有不同（linux系统大体相同，windows系统或有一些差异）</p>
 <p>[TOC]</p>
@@ -257,176 +409,314 @@
 
 <p>重新访问<a target="_blank" rel="noopener" href="http://username.github.io/%E5%8D%B3%E5%8F%AF%E8%8E%B7%E5%BE%97%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84%E5%86%85%E5%AE%B9">http://username.github.io/即可获得修改后的内容</a></p>
 
-    </div>
+            
 
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">1 环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%AE%89%E8%A3%85nodejs"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 安装nodejs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E5%AE%89%E8%A3%85hexo%E5%8F%8A%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.2 安装hexo及依赖</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">2.</span> <span class="nav-text">2 搭建个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 新建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E4%BF%9D%E5%AD%98%E8%B7%AF%E5%BE%84"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 新建一个博客保存路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 初始化博客</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 生成静态网页</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 生成静态网页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-%E9%A2%84%E8%A7%88"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 预览</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 博客部署到github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1 新建仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2 修改配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-%E5%8F%91%E4%B8%8D%E5%88%B0github"><span class="nav-number">2.3.3.</span> <span class="nav-text">2.3.3 发不到github</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E5%86%85%E5%AE%B9"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 修改博客内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-%E6%96%B0%E5%BB%BA%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.4.1 新建一篇博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2-%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.4.2 编写博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-3-%E9%87%8D%E6%96%B0%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github"><span class="nav-number">2.4.3.</span> <span class="nav-text">2.4.3 重新将博客部署到github</span></a></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-
         
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/09/03/firstblog/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2024/09/03/firstblog/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://example.com/2024/09/03/firstblog/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
 
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2024 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/09/03/firstblog/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2024/09/03/firstblog/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://example.com/2024/09/03/firstblog/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/09/03/firstblog/"
+                        aria-label="Share on Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=http://example.com/2024/09/03/firstblog/"
+                        aria-label="Share on Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=http://example.com/2024/09/03/firstblog/"
+                        aria-label="Share on Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
         
 
 
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
 
 
 
 
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
+    </body>
 </html>
