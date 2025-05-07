@@ -10,17 +10,21 @@
     <meta name="copyright" content="Hill">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hill&#39;s blog">
-<meta property="og:url" content="http://bhsh0112.github.io/categories/travel/index.html">
+    <meta name="description" content="脚本合集 概述（文件结构） 脚本使用说明 split_train_val.py write_img_path.py json_to_yolo.py split_files.py URL2mp4.py      脚本合集代码仓库为https:&#x2F;&#x2F;github.com&#x2F;bhsh0112&#x2F;Script，本仓库以个人应用为导向，总结学习与开发过程中应用到的脚本 概述（文件结构） yolo：yolo相关的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scripts">
+<meta property="og:url" content="http://bhsh0112.github.io/2025/05/07/Scripts/index.html">
 <meta property="og:site_name" content="Hill&#39;s blog">
+<meta property="og:description" content="脚本合集 概述（文件结构） 脚本使用说明 split_train_val.py write_img_path.py json_to_yolo.py split_files.py URL2mp4.py      脚本合集代码仓库为https:&#x2F;&#x2F;github.com&#x2F;bhsh0112&#x2F;Script，本仓库以个人应用为导向，总结学习与开发过程中应用到的脚本 概述（文件结构） yolo：yolo相关的">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-05-07T01:20:11.000Z">
+<meta property="article:modified_time" content="2025-05-07T01:22:09.472Z">
 <meta property="article:author" content="Hill">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/image.ico">
-    <title>Hill&#39;s Studio</title>
+    <title>Scripts · Hill&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -208,6 +212,7 @@
             document.write('<script src="/lib/jquery.min.js" />')
         }
     </script>
+        <body class="post-body">
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -237,7 +242,7 @@
             <a href="/">Hill&#39;s Studio.</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name"></a>
+            <a href="#" class="post-name">Scripts</a>
         </div>
     </div>
 </header>
@@ -245,6 +250,31 @@
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- donate button -->
+    <div class="donate-popup donate-popup--hidden">
+    <div class="donate-popup__title">Buy Me A Coffee</div>
+    <div class="donate-popup__content">
+        <div class="donate-popup__content-description">If this post helped you, please consider buying the author a cup of sugar-free coffee ☕️.</div>
+        <img
+            class="donate-popup__content-qrCode"
+            title="Wechat"
+            alt="Wechat"
+            src="/assets/donate-wechat.png"
+        ></img>
+        <img
+            class="donate-popup__content-qrCode"
+            title="Alipay"
+            alt="Alipay"
+            src="/assets/donate-alipay.png"
+        ></img>
+    </div>
+</div>
+
+    <div
+        title="Donate to the author"
+        class="footer-fixed-btn footer-fixed-btn--hidden donate-btn"
+    >
+        <i class="fas fa-donate"></i>
+    </div>
 
     <!-- back to top button -->
     <div class="footer-fixed-btn footer-fixed-btn--hidden back-top">
@@ -254,20 +284,56 @@
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="site-intro" style="">
+            <div class="site-intro" style="    height:50vh;
+">
     <!-- 主页  -->
+    <!-- 404页  -->
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+                Scripts
+            <!-- 404 -->
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            <!-- 404 -->
         </p>
         <!-- 文章页 meta -->
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                    <div class="post-intro-tags" >
+</div>
+
+                <!-- 文章字数统计 -->
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2025/05/07</span>
+                    <!-- busuanzi -->
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
     </div>
 </div>
 
@@ -396,35 +462,110 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" alt="loading">
             <div class="container container-unloaded">
-                <main class="main index-page">
-            
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/03/05/Gansu-travel/">
-                <span class="abstract-title-text">【旅游】甘肃</span>
-            </a>
-            <div class="abstract-content">
-                
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/03/05">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/03/05</span>
-                </div>
-                <!-- tags -->
-                    <div class="abstract-tags" >
-        <span class="post-category" data-categories="travel">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                travel
-            </span>
-        </span>
-</div>
+                <main class="main post-page">
+    <article class="article-entry">
+        <ul>
+<li><a href="#%E8%84%9A%E6%9C%AC%E5%90%88%E9%9B%86">脚本合集</a><ul>
+<li><a href="#%E6%A6%82%E8%BF%B0%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84">概述（文件结构）</a></li>
+<li><a href="#%E8%84%9A%E6%9C%AC%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">脚本使用说明</a><ul>
+<li><a href="#split_train_valpy">split_train_val.py</a></li>
+<li><a href="#write_img_pathpy">write_img_path.py</a></li>
+<li><a href="#json_to_yolopy">json_to_yolo.py</a></li>
+<li><a href="#split_filespy">split_files.py</a></li>
+<li><a href="#url2mp4py">URL2mp4.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="脚本合集"><a href="#脚本合集" class="headerlink" title="脚本合集"></a>脚本合集</h1><p>代码仓库为<a target="_blank" rel="noopener" href="https://github.com/bhsh0112/Script%EF%BC%8C%E6%9C%AC%E4%BB%93%E5%BA%93%E4%BB%A5%E4%B8%AA%E4%BA%BA%E5%BA%94%E7%94%A8%E4%B8%BA%E5%AF%BC%E5%90%91%EF%BC%8C%E6%80%BB%E7%BB%93%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%BA%94%E7%94%A8%E5%88%B0%E7%9A%84%E8%84%9A%E6%9C%AC">https://github.com/bhsh0112/Script，本仓库以个人应用为导向，总结学习与开发过程中应用到的脚本</a></p>
+<h2 id="概述（文件结构）"><a href="#概述（文件结构）" class="headerlink" title="概述（文件结构）"></a>概述（文件结构）</h2><ul>
+<li>yolo：yolo相关的脚本<ul>
+<li>split_train_val.py：数据集划分</li>
+<li>write_img_path.py：文件路径写入</li>
+<li>json_to_yolo.py：标注文件格式转换</li>
+</ul>
+</li>
+<li>split_files.py：文件均分</li>
+</ul>
+<h2 id="脚本使用说明"><a href="#脚本使用说明" class="headerlink" title="脚本使用说明"></a>脚本使用说明</h2><h3 id="split-train-val-py"><a href="#split-train-val-py" class="headerlink" title="split_train_val.py"></a>split_train_val.py</h3><p><strong>作用：</strong>划分数据集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python split_train_val.py</span><br></pre></td></tr></table></figure>
 
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    <!-- paginator  -->
+<h3 id="write-img-path-py"><a href="#write-img-path-py" class="headerlink" title="write_img_path.py"></a>write_img_path.py</h3><p><strong>作用：</strong>按要求把文件路径保存到指定文件</p>
+<ul>
+<li>按照格式修改64行的路径</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python write_img_path.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="json-to-yolo-py"><a href="#json-to-yolo-py" class="headerlink" title="json_to_yolo.py"></a>json_to_yolo.py</h3><p><strong>作用：</strong>对标注文件进行格式转换</p>
+<ul>
+<li>按照格式修改55行对检测类别的列举</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python json_to_yolo.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="split-files-py"><a href="#split-files-py" class="headerlink" title="split_files.py"></a>split_files.py</h3><p><strong>作用：</strong>把一个文件夹内的同类型文件等分到n个子文件夹中（常用于分配任务）</p>
+<ul>
+<li>参数说明<ul>
+<li>source_dir：要分配的文件夹</li>
+<li>file_extension：要分配文件的扩展名，例：.txt</li>
+<li>num_folders：要等分成几份</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python split_files.py --source_dir /path/to/folder --file_extension .[extension] --num_folders n</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python split_files.py --source_dir images file_extension .jpg --num_folders 5</span><br></pre></td></tr></table></figure>
+
+<h3 id="URL2mp4-py"><a href="#URL2mp4-py" class="headerlink" title="URL2mp4.py"></a>URL2mp4.py</h3><p><strong>作用：</strong>输入视频网站链接（当前支持bilibili和youtube），即可在当前目录下新建一个Downloads文件夹，保存链接中的视频</p>
+<p>环境配置：</p>
+<ul>
+<li><code>python -m pip install yt-dlp</code></li>
+<li>安装ffmpeg（不同系统或不同，可自查教程，通常单一指令即可）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python URL2mp4.mp4</span><br></pre></td></tr></table></figure>
+
+<p>运行后在终端输入URL即可</p>
+
+    </article>
+    <!-- license -->
+        <div class="license-wrapper">
+            <p>Author：<a href="http://bhsh0112.github.io">Hill</a>
+            <p>Link：<a href="http://bhsh0112.github.io/2025/05/07/Scripts/">http://bhsh0112.github.io/2025/05/07/Scripts/</a>
+            <p>Publish date：<a href="http://bhsh0112.github.io/2025/05/07/Scripts/">May 7th 2025, 9:20:11 am</a>
+            <p>Update date：<a href="http://bhsh0112.github.io/2025/05/07/Scripts/">May 7th 2025, 9:22:09 am</a>
+            <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+        </li>
+        <li class="previous">
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2025/03/12/Wireshark/" title="Wireshark简单说明">
+                    <div class="prevTitle">Wireshark简单说明</div>
+                </a>
+        </li>
+    </ul>
+    <!-- comment -->
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+            
+            
+            
+            <!-- utteranc评论 -->
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+            
+            
+            
+        </div>
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    <!-- Mathjax -->
 </main>
 
                 <!-- profile -->
@@ -452,6 +593,13 @@
 
         </div>
         <!-- toc -->
+            <div class="toc-wrapper toc-wrapper-loding" style=    top:50vh;
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E5%90%88%E9%9B%86"><span class="toc-number">1.</span> <span class="toc-text">脚本合集</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0%EF%BC%88%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">概述（文件结构）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">1.2.</span> <span class="toc-text">脚本使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#split-train-val-py"><span class="toc-number">1.2.1.</span> <span class="toc-text">split_train_val.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#write-img-path-py"><span class="toc-number">1.2.2.</span> <span class="toc-text">write_img_path.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#json-to-yolo-py"><span class="toc-number">1.2.3.</span> <span class="toc-text">json_to_yolo.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#split-files-py"><span class="toc-number">1.2.4.</span> <span class="toc-text">split_files.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URL2mp4-py"><span class="toc-number">1.2.5.</span> <span class="toc-text">URL2mp4.py</span></a></li></ol></li></ol></li></ol>
+            </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
@@ -588,7 +736,7 @@
         <!-- busuanzi -->
             <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
         <!-- async load share.js -->
+            <script src="/scripts/share.js" async></script>
         <!-- mermaid -->
     </body>
 </html>
->
