@@ -10,31 +10,21 @@
     <meta name="copyright" content="Hao Shan">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
-    <meta name="description" content="1 功能特点 数据包捕获与解析：Wireshark能够实时捕获经过网络接口的数据包，并详细解析数据包的各个字段，展示数据包的源地址、目的地址、协议类型、数据长度等信息。它支持对数百种网络协议的解析，包括常见的TCP、UDP、IP、HTTP、FTP、DNS等； 过滤功能强大：提供捕获过滤器和显示过滤器，用户可以根据协议、IP地址、端口号、数据包内容等条件设置过滤表达式，快速筛选出符合条件的数据包。这">
+    <meta name="description" content="auth：Hao Shan ！注：本文档是个人使用的笔记而非教程，对阅读学习并不友好，如需帮助请联系作者 主要参考教程 https:&#x2F;&#x2F;fastapi.tiangolo.com&#x2F;zh&#x2F;tutorial&#x2F;query-param-models&#x2F; https:&#x2F;&#x2F;www.runoob.com&#x2F;fastapi&#x2F;fastapi-tutorial.html 0 环境配置基础配置 12pip install f">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Tech】Wireshark简单说明">
-<meta property="og:url" content="http://bhsh0112.github.io/2025/03/12/Wireshark/index.html">
+<meta property="og:title" content="FastAPI">
+<meta property="og:url" content="http://bhsh0112.github.io/2025/05/09/FastAPI/index.html">
 <meta property="og:site_name" content="Hao Shan&#39;s blog">
-<meta property="og:description" content="1 功能特点 数据包捕获与解析：Wireshark能够实时捕获经过网络接口的数据包，并详细解析数据包的各个字段，展示数据包的源地址、目的地址、协议类型、数据长度等信息。它支持对数百种网络协议的解析，包括常见的TCP、UDP、IP、HTTP、FTP、DNS等； 过滤功能强大：提供捕获过滤器和显示过滤器，用户可以根据协议、IP地址、端口号、数据包内容等条件设置过滤表达式，快速筛选出符合条件的数据包。这">
+<meta property="og:description" content="auth：Hao Shan ！注：本文档是个人使用的笔记而非教程，对阅读学习并不友好，如需帮助请联系作者 主要参考教程 https:&#x2F;&#x2F;fastapi.tiangolo.com&#x2F;zh&#x2F;tutorial&#x2F;query-param-models&#x2F; https:&#x2F;&#x2F;www.runoob.com&#x2F;fastapi&#x2F;fastapi-tutorial.html 0 环境配置基础配置 12pip install f">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image1.jpg">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image2.jpg">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image3.jpg">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image4.jpg">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image5.jpg">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image6.jpg">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image7.jpg">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image8.jpg">
-<meta property="og:image" content="http://bhsh0112.github.io/images/Wireshark/image9.jpg">
-<meta property="article:published_time" content="2025-03-12T11:04:31.000Z">
-<meta property="article:modified_time" content="2025-05-07T02:20:36.725Z">
+<meta property="article:published_time" content="2025-05-09T06:00:14.000Z">
+<meta property="article:modified_time" content="2025-05-09T06:01:05.821Z">
 <meta property="article:author" content="Hao Shan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://bhsh0112.github.io/images/Wireshark/image1.jpg">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/image.ico">
-    <title>【Tech】Wireshark简单说明 · Hao Shan&#39;s Studio</title>
+    <title>FastAPI · Hao Shan&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -252,7 +242,7 @@
             <a href="/">Hao Shan&#39;s Studio.</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name">【Tech】Wireshark简单说明</a>
+            <a href="#" class="post-name">FastAPI</a>
         </div>
     </div>
 </header>
@@ -304,7 +294,7 @@
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-                【Tech】Wireshark简单说明
+                FastAPI
             <!-- 404 -->
         </h1>
         <!-- 副标题 -->
@@ -326,12 +316,12 @@
 
                 <!-- 文章字数统计 -->
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">756</span>Reading time: <span class="post-count reading-time">2 min</span></span>
+                        <span>Word count: <span class="post-count word-count">619</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2025/03/12</span>
+                    <span class="post-intro-time">2025/05/09</span>
                     <!-- busuanzi -->
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                             <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
@@ -483,64 +473,70 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h2 id="1-功能特点"><a href="#1-功能特点" class="headerlink" title="1 功能特点"></a>1 功能特点</h2><ul>
-<li><strong>数据包捕获与解析</strong>：Wireshark能够实时捕获经过网络接口的数据包，并详细解析数据包的各个字段，展示数据包的源地址、目的地址、协议类型、数据长度等信息。它支持对数百种网络协议的解析，包括常见的TCP、UDP、IP、HTTP、FTP、DNS等；</li>
-<li><strong>过滤功能强大</strong>：提供捕获过滤器和显示过滤器，用户可以根据协议、IP地址、端口号、数据包内容等条件设置过滤表达式，快速筛选出符合条件的数据包。这有助于在大量数据包中定位特定的流量，提高分析效率；</li>
-<li><strong>数据包重组与分析</strong>：能够将属于同一个会话或文件传输的多个数据包进行重组，还原出完整的应用层数据，如图片、文件、视频等。同时，可按照协议层次展示数据包的各个字段的含义，使用户能够清晰地看到数据包的具体内容；</li>
-<li><strong>跨平台与开源</strong>：支持Windows、Linux、macOS等主流操作系统。作为一款开源工具，拥有庞大的社区支持，用户可以免费使用，并能根据需要查看或修改源代码；</li>
-<li><strong>应用场景广泛</strong>：可用于网络故障排查、安全分析、协议开发与调试以及教育等领域。</li>
-</ul>
-<h2 id="2-安装说明"><a href="#2-安装说明" class="headerlink" title="2 安装说明"></a>2 安装说明</h2><p>PS：这里介绍MacOS下的详细情况</p>
-<p><strong>STEP1：</strong>官网下载<a target="_blank" rel="noopener" href="https://www.wireshark.org/download.html">https://www.wireshark.org/download.html</a></p>
-<p><strong>STEP2：</strong>权限更改</p>
-<p>命令行执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 /dev/bpf*</span><br></pre></td></tr></table></figure>
+        <p>auth：Hao Shan</p>
+<p><font color="red"><strong>！注：本文档是个人使用的笔记而非教程，对阅读学习并不友好，如需帮助请联系作者</strong></font></p>
+<p>主要参考教程</p>
+<p><a target="_blank" rel="noopener" href="https://fastapi.tiangolo.com/zh/tutorial/query-param-models/">https://fastapi.tiangolo.com/zh/tutorial/query-param-models/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/fastapi/fastapi-tutorial.html">https://www.runoob.com/fastapi/fastapi-tutorial.html</a></p>
+<h2 id="0-环境配置"><a href="#0-环境配置" class="headerlink" title="0 环境配置"></a>0 环境配置</h2><p>基础配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install fastapi</span><br><span class="line">pip install <span class="string">&quot;uvicorn[standard]&quot;</span>  <span class="comment">#安装一个ASGI服务器，这里选择的是ubicorn</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="3-简单使用方法"><a href="#3-简单使用方法" class="headerlink" title="3 简单使用方法"></a>3 简单使用方法</h2><h3 id="3-1-抓包的开启与停止"><a href="#3-1-抓包的开启与停止" class="headerlink" title="3.1 抓包的开启与停止"></a>3.1 抓包的开启与停止</h3><h4 id="选择网卡（Command-K）"><a href="#选择网卡（Command-K）" class="headerlink" title="选择网卡（Command+K）"></a>选择网卡（Command+K）</h4><p>依次点集“Capture”—&gt;”Options……”，选择你想要抓包的网卡，选取网卡开始抓包</p>
-<p><img src="/images/Wireshark/image1.jpg"></p>
-<h4 id="开始抓包（Command-E）"><a href="#开始抓包（Command-E）" class="headerlink" title="开始抓包（Command+E）"></a>开始抓包（Command+E）</h4><p>点击工具栏最左侧的Wireshark图标即可开始抓包</p>
-<p><img src="/images/Wireshark/image2.jpg"></p>
-<h4 id="结束抓包（Command-E）"><a href="#结束抓包（Command-E）" class="headerlink" title="结束抓包（Command+E）"></a>结束抓包（Command+E）</h4><p>开始抓包后的界面如下</p>
-<p><img src="/images/Wireshark/image3.jpg"></p>
-<p>点击蓝色框中的结束按钮，即可结束抓包</p>
-<h3 id="2-3-2-数据保存与导出"><a href="#2-3-2-数据保存与导出" class="headerlink" title="2.3.2 数据保存与导出"></a>2.3.2 数据保存与导出</h3><h4 id="保存与导出的区别"><a href="#保存与导出的区别" class="headerlink" title="保存与导出的区别"></a>保存与导出的区别</h4><p>保存只能一次保存所有抓到的数据包</p>
-<p>导出可以保存部分数据包</p>
-<h4 id="数据保存（Command-S）"><a href="#数据保存（Command-S）" class="headerlink" title="数据保存（Command+S）"></a>数据保存（Command+S）</h4><p>单击工具栏中红色框框住的图标</p>
-<p><img src="/images/Wireshark/image4.jpg"></p>
-<h4 id="数据导出"><a href="#数据导出" class="headerlink" title="数据导出"></a>数据导出</h4><p><strong>STEP1：</strong>选中所有你需要的数据包（结合command键&#x2F;shift键与单击的配合）</p>
-<p><strong>STEP2：</strong>依次点击“File”–&gt;”Export Specified Packets……”</p>
-<p><img src="/images/Wireshark/image5.jpg"></p>
-<p><strong>STEP3：</strong>红框位置选择Selected packets only，之后确定文件名字及保存位置即可</p>
-<p><img src="/images/Wireshark/image6.jpg"></p>
-<h3 id="2-3-4-过滤器的使用"><a href="#2-3-4-过滤器的使用" class="headerlink" title="2.3.4 过滤器的使用"></a>2.3.4 过滤器的使用</h3><h4 id="BPF语法"><a href="#BPF语法" class="headerlink" title="BPF语法"></a>BPF语法</h4><p>对过滤内容的描述需要用到BPF，语法内容可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43665434/article/details/109400109">https://blog.csdn.net/qq_43665434/article/details/109400109</a></p>
-<h4 id="抓包过滤器（过滤抓取的内容）"><a href="#抓包过滤器（过滤抓取的内容）" class="headerlink" title="抓包过滤器（过滤抓取的内容）"></a>抓包过滤器（过滤抓取的内容）</h4><p><strong>STEP1：</strong>依次点集“Capture”—&gt;”Options……”</p>
-<p><img src="/images/Wireshark/image7.jpg"></p>
-<p><strong>STEP2：</strong>在红框位置，用BPF语言描述过滤需求</p>
-<p><img src="/images/Wireshark/image8.jpg"></p>
-<h4 id="显示过滤器（过滤显示的内容）"><a href="#显示过滤器（过滤显示的内容）" class="headerlink" title="显示过滤器（过滤显示的内容）"></a>显示过滤器（过滤显示的内容）</h4><p>在工具栏下方的过滤栏中输入过滤信息，对显示出的数据包内容进行过滤</p>
-<p><img src="/images/Wireshark/image9.jpg"></p>
+<p>后续开发可能需要安装别的软件环境，届时安装即可</p>
+<h2 id="1-代码基础"><a href="#1-代码基础" class="headerlink" title="1 代码基础"></a>1 代码基础</h2><h3 id="1-1-hello-world"><a href="#1-1-hello-world" class="headerlink" title="1.1 hello world"></a>1.1 hello world</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI</span><br><span class="line"></span><br><span class="line">app = FastAPI()</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.get(<span class="params"><span class="string">&quot;/&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">root</span>():</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;message&quot;</span>: <span class="string">&quot;Hello World&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>代码解析：</strong>（这里简单解释，在<code>1.3</code>中还会具体介绍每一部分的含义）</p>
+<ul>
+<li><code>from fastapi import FastAPI</code>： 这行代码从&lt; code&gt;fastapi 模块中导入了 <code>FastAPI</code> 类。<code>FastAPI</code> 类是 FastAPI 框架的核心，用于创建 FastAPI 应用程序实例。</li>
+<li><code>app = FastAPI()</code>：这行代码创建了一个 FastAPI 应用实例。与 Flask 不同，FastAPI 不需要传递 <code>__name__</code> 参数，因为它默认使用当前模块。</li>
+<li><code>@app.get(&quot;/&quot;)</code>： 这是一个装饰器，用于告诉 FastAPI 哪个 URL 应该触发下面的函数，并且指定了 HTTP 方法为 GET。在这个例子中，它指定了根 URL（即网站的主页）。</li>
+<li><code>def read_root():</code>： 这是定义了一个名为 <code>read_root</code> 的函数，它将被调用当用户使用 GET 方法访问根 URL 时。</li>
+<li><code>return &#123;&quot;Hello&quot;: &quot;World&quot;&#125;</code>： 这行代码是 <code>read_root</code> 函数的返回值。当用户使用 GET 方法访问根 URL 时，这个 JSON 对象将被发送回用户的浏览器或 API 客户端。</li>
+</ul>
+<h3 id="1-2-代码运行"><a href="#1-2-代码运行" class="headerlink" title="1.2 代码运行"></a>1.2 代码运行</h3><p>示例：运行当前路径下<code>main.py</code>中的代码（<code>--reload</code>参数指明代码修改后会自动重新启动服务器）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uvicorn main:app --reload</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-基础代码架构"><a href="#1-3-基础代码架构" class="headerlink" title="1.3 基础代码架构"></a>1.3 基础代码架构</h3><p>后端与客户端的</p>
+<h4 id="Step1-导入必要的软件包"><a href="#Step1-导入必要的软件包" class="headerlink" title="Step1 导入必要的软件包"></a>Step1 导入必要的软件包</h4><p>必须导入FastAPI，除此之外还可以导入其他所需的软件包</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#必要</span></span><br><span class="line"><span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI</span><br><span class="line"><span class="comment">#常用可选</span></span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">Union</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Step2-创建FastAPI实例"><a href="#Step2-创建FastAPI实例" class="headerlink" title="Step2 创建FastAPI实例"></a>Step2 创建FastAPI实例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app=FastAPI()</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step3-创建一个路径操作——定义操作类型，以及要操作的路径"><a href="#Step3-创建一个路径操作——定义操作类型，以及要操作的路径" class="headerlink" title="Step3 创建一个路径操作——定义操作类型，以及要操作的路径"></a>Step3 创建一个路径操作——定义操作类型，以及要操作的路径</h4><p>这里以python装饰器的形式实现</p>
+<p>例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.get(<span class="params"><span class="string">&quot;/&quot;</span></span>)</span></span><br></pre></td></tr></table></figure>
+
+<p>例解：</p>
+<ul>
+<li>请求路径为 <code>/</code></li>
+<li>使用 <code>get</code> 操作</li>
+</ul>
+<p>这里常用的操作有：</p>
+<ul>
+<li><code>post</code>：创建数据；</li>
+<li><code>get</code>：读取数据；</li>
+<li><code>put</code>：更新数据；</li>
+<li><code>delete</code>：删除数据。</li>
+</ul>
+<h4 id="Step4-定义路径操作函数"><a href="#Step4-定义路径操作函数" class="headerlink" title="Step4 定义路径操作函数"></a>Step4 定义路径操作函数</h4><h2 id="2-交互式文档"><a href="#2-交互式文档" class="headerlink" title="2 交互式文档"></a>2 交互式文档</h2><p><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/docs">http://127.0.0.1:8000/docs</a></p>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/redoc">http://127.0.0.1:8000/redoc</a></p>
 
     </article>
     <!-- license -->
         <div class="license-wrapper">
             <p>Author：<a href="http://bhsh0112.github.io">Hao Shan</a>
-            <p>Link：<a href="http://bhsh0112.github.io/2025/03/12/Wireshark/">http://bhsh0112.github.io/2025/03/12/Wireshark/</a>
-            <p>Publish date：<a href="http://bhsh0112.github.io/2025/03/12/Wireshark/">March 12th 2025, 7:04:31 pm</a>
-            <p>Update date：<a href="http://bhsh0112.github.io/2025/03/12/Wireshark/">May 7th 2025, 10:20:36 am</a>
+            <p>Link：<a href="http://bhsh0112.github.io/2025/05/09/FastAPI/">http://bhsh0112.github.io/2025/05/09/FastAPI/</a>
+            <p>Publish date：<a href="http://bhsh0112.github.io/2025/05/09/FastAPI/">May 9th 2025, 2:00:14 pm</a>
+            <p>Update date：<a href="http://bhsh0112.github.io/2025/05/09/FastAPI/">May 9th 2025, 2:01:05 pm</a>
             <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     <!-- paginator -->
     <ul class="post-paginator">
         <li class="next">
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2025/05/07/Scripts/" title="【Tech】脚本合集">
-                    <div class="nextTitle">【Tech】脚本合集</div>
-                </a>
         </li>
         <li class="previous">
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2025/03/05/Gansu-travel/" title="【Travel】甘肃">
-                    <div class="prevTitle">【Travel】甘肃</div>
+                <a href="/2025/05/08/intranet-penetration/" title="【Tech】内网穿透配置教程（撰写中……）">
+                    <div class="prevTitle">【Tech】内网穿透配置教程（撰写中……）</div>
                 </a>
         </li>
     </ul>
@@ -595,7 +591,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8A%9F%E8%83%BD%E7%89%B9%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">1 功能特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E"><span class="toc-number">2.</span> <span class="toc-text">2 安装说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">3 简单使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%8A%93%E5%8C%85%E7%9A%84%E5%BC%80%E5%90%AF%E4%B8%8E%E5%81%9C%E6%AD%A2"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 抓包的开启与停止</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E7%BD%91%E5%8D%A1%EF%BC%88Command-K%EF%BC%89"><span class="toc-number">3.1.1.</span> <span class="toc-text">选择网卡（Command+K）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E6%8A%93%E5%8C%85%EF%BC%88Command-E%EF%BC%89"><span class="toc-number">3.1.2.</span> <span class="toc-text">开始抓包（Command+E）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F%E6%8A%93%E5%8C%85%EF%BC%88Command-E%EF%BC%89"><span class="toc-number">3.1.3.</span> <span class="toc-text">结束抓包（Command+E）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98%E4%B8%8E%E5%AF%BC%E5%87%BA"><span class="toc-number">3.2.</span> <span class="toc-text">2.3.2 数据保存与导出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98%E4%B8%8E%E5%AF%BC%E5%87%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.2.1.</span> <span class="toc-text">保存与导出的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98%EF%BC%88Command-S%EF%BC%89"><span class="toc-number">3.2.2.</span> <span class="toc-text">数据保存（Command+S）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA"><span class="toc-number">3.2.3.</span> <span class="toc-text">数据导出</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.3.</span> <span class="toc-text">2.3.4 过滤器的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#BPF%E8%AF%AD%E6%B3%95"><span class="toc-number">3.3.1.</span> <span class="toc-text">BPF语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%93%E5%8C%85%E8%BF%87%E6%BB%A4%E5%99%A8%EF%BC%88%E8%BF%87%E6%BB%A4%E6%8A%93%E5%8F%96%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%89"><span class="toc-number">3.3.2.</span> <span class="toc-text">抓包过滤器（过滤抓取的内容）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E8%BF%87%E6%BB%A4%E5%99%A8%EF%BC%88%E8%BF%87%E6%BB%A4%E6%98%BE%E7%A4%BA%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%89"><span class="toc-number">3.3.3.</span> <span class="toc-text">显示过滤器（过滤显示的内容）</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">0 环境配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%A3%E7%A0%81%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">1 代码基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-hello-world"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 hello world</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 代码运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81%E6%9E%B6%E6%9E%84"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 基础代码架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step1-%E5%AF%BC%E5%85%A5%E5%BF%85%E8%A6%81%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">2.3.1.</span> <span class="toc-text">Step1 导入必要的软件包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step2-%E5%88%9B%E5%BB%BAFastAPI%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.3.2.</span> <span class="toc-text">Step2 创建FastAPI实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step3-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%B7%AF%E5%BE%84%E6%93%8D%E4%BD%9C%E2%80%94%E2%80%94%E5%AE%9A%E4%B9%89%E6%93%8D%E4%BD%9C%E7%B1%BB%E5%9E%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%A6%81%E6%93%8D%E4%BD%9C%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="toc-number">2.3.3.</span> <span class="toc-text">Step3 创建一个路径操作——定义操作类型，以及要操作的路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step4-%E5%AE%9A%E4%B9%89%E8%B7%AF%E5%BE%84%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0"><span class="toc-number">2.3.4.</span> <span class="toc-text">Step4 定义路径操作函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BA%A4%E4%BA%92%E5%BC%8F%E6%96%87%E6%A1%A3"><span class="toc-number">3.</span> <span class="toc-text">2 交互式文档</span></a></li></ol>
             </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
